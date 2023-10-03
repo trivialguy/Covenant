@@ -20,6 +20,12 @@ contract Main{
     function deposit() public payable returns (uint256){
         return address(this).balance;
     }
+    function arr_length() public view returns (uint256){
+        return arr.length;
+    }
+    function curr_length() public view returns (uint256){
+        return ind;
+    }
     function vote(string calldata hash) public payable{
         require(msg.value==deno,"");
         arr.push(hash);
